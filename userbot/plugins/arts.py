@@ -493,6 +493,21 @@ T = (
     "░░░░░░░░░░░░▀▀\n"
 )
 
+U =(
+
+  "░░░░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░░░░░\n"
+  "░░░░░░░░░░░░░░░░░░█░█░░░░░░░░░░░░░░░\n"
+  "░░░░░░░░░░░░░░░░░▄▀░█░░░░░░░░░░░░░░░\n"
+  "░░░░░░░░░░████▄▄▄▀░░▀▀▀▀▄░░░░░░░░░░░\n"
+  "░░░░░░░░░░████░░░░░░░░░░█░░░░░░░░░░\n"
+  "░░░░░░░░░░████░░░░░░░░░░█░░░░░░░░\n"
+  "░░░░░░░░░░████▄▄▄░░░░░░░█░░░░░░\n"
+  "░░░░░░░░░░░░▀▀▀▀░░░▀▀▀▀▀▀▀░░░░░\n"
+
+
+
+
+
 
 @bot.on(admin_cmd(pattern=r"monster$"))
 @bot.on(sudo_cmd(pattern="monster$", allow_sudo=True))
@@ -605,6 +620,13 @@ async def bluedevildislike(dislike):
         return
     await edit_or_reply(dislike, T)
 
+@bot.on(admin_cmd(pattern=r"like$"))
+@bot.on(sudo_cmd(pattern="like$", allow_sudo=True))
+async def bluedevillike(like):
+    if like.fwd_from:
+        return
+    await edit_or_reply(like, U)
+
 
 CmdHelp("arts").add_command(
   'elove', None, 'Use and see'
@@ -652,4 +674,6 @@ CmdHelp("arts").add_command(
   'china', '<text>', 'Send your text in china art'
 ).add_command(
   'sshit', None, 'Send a art in "Ahh shit. Here we go again"'
+).add_command( 
+ 'like', None, 'Use and see'
 ).add()
