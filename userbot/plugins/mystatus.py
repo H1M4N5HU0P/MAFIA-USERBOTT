@@ -9,7 +9,7 @@ from userbot.cmdhelp import CmdHelp
 OFFLINE_TAG = "[•OFFLINE•]"
 ONLINE_TAG = "[•ONLINE•]"
 PROFILE_IMAGE = os.environ.get(
-    "PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg"
+    "PROFILE_IMAGE", "https://telegra.ph/file/8dd86f038abffe5ab705a.jpg"
 )
 
 
@@ -26,7 +26,7 @@ async def _(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     urllib.request.urlretrieve(
-        "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg", "donottouch.jpg"
+        "https://telegra.ph/file/a8944f9944ceb3077f1c8.jpg", "donottouch.jpg"
     )
     photo = "donottouch.jpg"
     if photo:
